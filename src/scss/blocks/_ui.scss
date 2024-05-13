@@ -1,0 +1,173 @@
+@import 'variables';
+
+// ========= ЗАГОЛОВОК ===============================================================================================================================
+.title {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+// ========= КНОПКА ===============================================================================================================================
+.button {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+  padding: 16px 40px;
+  &_white {
+    color: white;
+    border: 1px solid white;
+  }
+  &_black {
+    color: black;
+    border: 1px solid black;
+  }
+  &:hover {
+    background-color: #f8f7f7;
+    color: #3c3c3c;
+    border: 1px solid black;
+    transition: all 1s 0s ease;
+  }
+}
+// ========= НАВИГАЦИОННАЯ ПАНЕЛЬ ===============================================================================================================================
+.menu {
+  text-align: center;
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    a {
+      color: #3c3c3c;
+    }
+    cursor: pointer;
+    color: #3c3c3c;
+    margin: 0px 2.5%;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 400;
+    &_active {
+        color: #ada074;
+      font-weight: 700;
+      &:hover {
+        color:  #d5c388 ;
+        transition: all 1s 0s ease;
+      }
+    }
+    &:hover {
+      font-weight: bold;
+      transition: all 1s 0s ease;
+    }
+    @media screen and (max-width: $bp1) {
+      flex: 1 1 25%;
+      margin: 15px 2%;
+    }
+  }
+}
+// ========= ИКОНКИ ИЗ РАЗДЕЛА ABOUT ===============================================================================================================================
+.icons {
+  margin: 0px auto;
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin: 0px -20px;
+    @media screen and (max-width: $bp2) {
+      flex-direction: column;
+      margin: 0px auto;
+    }
+  }
+}
+// ========= СОДЕРЖИМОЕ ИКОНОК ИЗ РАЗДЕЛА ABOUT ===============================================================================================================================
+
+  .infoicon {
+    flex: 0 1 300px;
+    display: flex;
+    padding: 0px 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    &__icon {
+      picture {
+        width: 42px;
+        height: 42px;
+      }
+      border-radius: 50%;
+      border: 1px solid rgb(196, 194, 194);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      margin-bottom: 40px;
+      &_web picture {
+        position: relative;
+        left: 2.5px;
+        top: 2px;
+      }
+      &_ios picture {
+        position: relative;
+        left: 5px;
+        top: 4px;
+      }
+      &_marketing picture {
+        position: relative;
+        top: 4px;
+        left: 5px;
+      }
+      @media screen and (max-width: $bp2) {
+        margin-bottom: 20px;
+      }
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      margin-bottom: 36px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 26px;
+      font-weight: 300;
+      color: #868585;
+    }
+  }
+// ========= ФОТКА ИЗ ПОРТФОЛИО ===============================================================================================================================
+  .example {
+    flex: 0 1 50%;
+    @media screen and (max-width: $bp1) {
+      flex: 0 1 100%;
+    }
+    &__image {
+      width: 100%;
+      @media screen and (max-width: $bp3) {
+        padding: 0px 5%;
+      }
+    }
+  }
+// ========= ИНПУТ ===============================================================================================================================
+  .input {
+    &__label {
+      font-size: 14px;
+      display: inline-block;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+    }
+    &__area {
+      padding: 10px;
+      width: 100%;
+      &_h {
+        height: 35px;
+      }
+      &_bt {
+        background-color: #f8f7f7;
+        border-top: 1px solid black;
+      }
+    }
+  }
+  

@@ -1,0 +1,702 @@
+/* Base */ /* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  font-display: swap;
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Blocks */
+.footer {
+  background-color: #3c3c3c;
+  padding: 50px 0px;
+}
+.footer__content {
+  text-align: center;
+  font-size: 14px;
+}
+.footer__logo {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.footer__img {
+  width: 125px;
+}
+.footer__menu {
+  margin-bottom: 35px;
+}
+.footer__list {
+  display: flex;
+  justify-content: center;
+}
+.footer__list-item {
+  margin-right: 20px;
+}
+.footer__link {
+  color: #a4a4a4;
+}
+.footer__link:hover {
+  color: white;
+}
+.footer__year {
+  color: #6c6c6c;
+}
+
+.title {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.button {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  background-color: transparent;
+  padding: 16px 40px;
+}
+.button_white {
+  color: white;
+  border: 1px solid white;
+}
+.button_black {
+  color: black;
+  border: 1px solid black;
+}
+.button:hover {
+  background-color: #f8f7f7;
+  color: #3c3c3c;
+  border: 1px solid black;
+  transition: all 1s 0s ease;
+}
+
+.menu {
+  text-align: center;
+}
+.menu__row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.menu__item {
+  cursor: pointer;
+  color: #3c3c3c;
+  margin: 0px 2.5%;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.menu__item a {
+  color: #3c3c3c;
+}
+.menu__item_active {
+  color: #ada074;
+  font-weight: 700;
+}
+.menu__item_active:hover {
+  color: #d5c388;
+  transition: all 1s 0s ease;
+}
+.menu__item:hover {
+  font-weight: bold;
+  transition: all 1s 0s ease;
+}
+@media screen and (max-width: 576px) {
+  .menu__item {
+    flex: 1 1 25%;
+    margin: 15px 2%;
+  }
+}
+
+.icons {
+  margin: 0px auto;
+}
+.icons__row {
+  display: flex;
+  justify-content: center;
+  margin: 0px -20px;
+}
+@media screen and (max-width: 768px) {
+  .icons__row {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+}
+
+.infoicon {
+  flex: 0 1 300px;
+  display: flex;
+  padding: 0px 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.infoicon__icon {
+  border-radius: 50%;
+  border: 1px solid rgb(196, 194, 194);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 40px;
+}
+.infoicon__icon picture {
+  width: 42px;
+  height: 42px;
+}
+.infoicon__icon_web picture {
+  position: relative;
+  left: 2.5px;
+  top: 2px;
+}
+.infoicon__icon_ios picture {
+  position: relative;
+  left: 5px;
+  top: 4px;
+}
+.infoicon__icon_marketing picture {
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+@media screen and (max-width: 768px) {
+  .infoicon__icon {
+    margin-bottom: 20px;
+  }
+}
+.infoicon__title {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  margin-bottom: 36px;
+}
+.infoicon__text {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #868585;
+}
+
+.example {
+  flex: 0 1 50%;
+}
+@media screen and (max-width: 576px) {
+  .example {
+    flex: 0 1 100%;
+  }
+}
+.example__image {
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .example__image {
+    padding: 0px 5%;
+  }
+}
+
+.input__label {
+  font-size: 14px;
+  display: inline-block;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+.input__area {
+  padding: 10px;
+  width: 100%;
+}
+.input__area_h {
+  height: 35px;
+}
+.input__area_bt {
+  background-color: #f8f7f7;
+  border-top: 1px solid black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0px auto;
+}
+
+.header {
+  background: url(./../img/header_back.png) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header .container {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  margin: 15vh auto;
+}
+@media screen and (max-width: 992px) {
+  .header__logo {
+    margin: 9vh auto;
+  }
+}
+.header__title {
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  text-align: center;
+}
+.header__title_l {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 576px) {
+  .header__title_l {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+.header__title_s {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 10px 0px 4.6vh 0px;
+}
+@media screen and (max-width: 576px) {
+  .header__title_s {
+    font-size: 1.2rem;
+  }
+}
+.header__title_s::after {
+  content: "";
+  background-color: #ffffff;
+  width: 9.4%;
+  height: 2px;
+  display: block;
+  margin: 5vh auto 5vh auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .header__title_s::after {
+    margin-bottom: 5vh;
+  }
+}
+.header__button {
+  margin-bottom: 5vh;
+}
+.header__icon {
+  margin-bottom: 8vh;
+  cursor: pointer;
+}
+.header__image {
+  width: 17px;
+  animation: moving-arrow 1s linear infinite alternate;
+}
+.header__image:hover {
+  animation-play-state: paused;
+}
+
+@keyframes moving-arrow {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+.navbar {
+  margin: 0px auto 17% auto;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+.navbar__menu {
+  padding: 24px 0;
+}
+
+.about {
+  padding: 0px 10px 60px 10px;
+}
+.about__title::after {
+  content: "";
+  width: 73%;
+  height: 1px;
+  display: block;
+  margin: 35px auto;
+  background-color: black;
+}
+.about__body {
+  margin: 0px auto 70px auto;
+}
+.about__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__text {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 300;
+  color: #868585;
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+.portfolio {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 107px 0px 80px 0px;
+}
+.portfolio__title {
+  margin-bottom: 5.3%;
+}
+.portfolio__menu {
+  margin-bottom: 8%;
+}
+.portfolio__body {
+  margin-bottom: 48px;
+}
+.portfolio__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px -13px;
+}
+.portfolio__example {
+  margin-bottom: 16px;
+  padding: 0px 13px;
+}
+.portfolio__button a {
+  color: #000000;
+}
+.portfolio__button:hover {
+  box-shadow: 7px 7px 0;
+  transition: all 1s ease;
+}
+.portfolio__button:active {
+  box-shadow: 3px 3px 0;
+  transition: all 0.2s ease;
+}
+
+.partners {
+  max-height: 390px;
+  background-image: url(./../img/partner_background.png);
+  background-repeat: no-repeat;
+  padding: 9.5vh 0px;
+  background-position: bottom;
+  background-size: cover;
+}
+.partners__title {
+  font-size: 30.4px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  margin-bottom: 9.2%;
+}
+.partners__icons {
+  text-align: center;
+  max-width: 585px;
+  margin: 0px auto;
+}
+.partners__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.partners__image-block {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 25%;
+}
+@media screen and (max-width: 576px) {
+  .partners__image-block {
+    flex: 0 1 50%;
+    margin-bottom: 5%;
+  }
+}
+.partners__image_first {
+  width: 35px;
+  height: 47px;
+}
+.partners__image_second {
+  width: 52px;
+  height: 62px;
+}
+.partners__image_third {
+  width: 53px;
+  height: 63px;
+}
+.partners__image_fourth {
+  width: 111px;
+  height: 40px;
+}
+
+.contact {
+  padding: 100px 0;
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 30px;
+  }
+}
+.contact__title {
+  margin: 80px auto 160px auto;
+  text-align: center;
+}
+.contact__title::after {
+  content: "";
+  width: 8%;
+  height: 1px;
+  display: block;
+  margin: 35px auto;
+  background-color: black;
+}
+@media screen and (max-width: 670px) {
+  .contact__title {
+    margin: 0 auto 60px auto;
+  }
+}
+.contact__row {
+  display: flex;
+  justify-content: center;
+  margin: 0px -35px;
+}
+@media screen and (max-width: 670px) {
+  .contact__row {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+.contact__left-side {
+  flex: 0 1 380px;
+  padding-right: 35px;
+}
+@media screen and (max-width: 670px) {
+  .contact__left-side {
+    padding: 0;
+    width: 80%;
+  }
+}
+.contact__left-row {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+.contact__name-email {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 670px) {
+  .contact__name-email {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+.contact__name {
+  flex: 0 1 160px;
+}
+@media screen and (max-width: 670px) {
+  .contact__name {
+    margin-bottom: 30px;
+  }
+}
+.contact__email {
+  flex: 0 1 160px;
+}
+.contact__message {
+  flex: 0 1 100%;
+  width: 100%;
+}
+.contact__message textarea {
+  resize: vertical;
+}
+.contact__submit {
+  flex: 0 1 44px;
+  margin-top: 40px;
+  background-color: transparent;
+}
+.contact__submit input {
+  background-color: transparent;
+}
+.contact__submit :hover {
+  color: #868585;
+}
+.contact__right-side {
+  text-align: left;
+  padding-left: 35px;
+  flex: 0 1 270px;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@media screen and (max-width: 670px) {
+  .contact__right-side {
+    text-align: center;
+    max-width: 265px;
+    padding: 0;
+  }
+}
+.contact__paragraph {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.contact__author {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.contact__image-wrapper {
+  display: inline-block;
+  border: 2px solid #1e1e1e;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.contact__icons {
+  margin-bottom: 10px;
+}
+.contact__icons_pf {
+  padding: 7px 10px;
+}
+.contact__icons_ps {
+  padding: 8.5px;
+}
+.contact__mail {
+  font-weight: 400;
+}
+.contact__mail a {
+  color: black;
+  font-weight: 700;
+}
+
+/* No styles code below. Only in modules */
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uc2NzcyIsImJhc2UvX3Jlc2V0LnNjc3MiLCJiYXNlL19mb250c0F1dG9HZW4uc2NzcyIsImJsb2Nrcy9fZm9vdGVyLnNjc3MiLCJibG9ja3MvX3VpLnNjc3MiLCJibG9ja3Mvc3R5bGUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQ0NBO0VBQ0M7RUFDQTtFQUNBOzs7QUFHRDtBQUFBO0FBQUE7RUFHQzs7O0FBR0Q7QUFFQTtFQUNJOzs7QUFHSjtFQUNJOzs7QUFHSjtBQUVBO0VBQ0M7OztBQUdEO0VBQ0k7RUFDSDs7O0FBR0Q7RUFDQzs7O0FBR0Q7RUFDQzs7O0FBR0Q7RUFDQztFQUNBOzs7QUFHRDtFQUNFOzs7QUFHRjtBQUVBO0VBQ0M7RUFDRztFQUNBO0VBQ0E7OztBQUdKO0VBQ0M7OztBQUdEO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7O0FBR0o7QUFBQTtFQUVJOzs7QUFHSjtFQUNDO0VBQ0E7OztBQUdEO0VBQ0M7OztBQUdEO0VBQ0M7OztBQ3ZGRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUQ7RUFDQztFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVEO0VBQ0M7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFRDtFQUNDO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FGdkJEO0FHSEE7RUFDRTtFQUNBOztBQUNBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTs7QUFHRjtFQUNFOztBQUdGO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7O0FBR0Y7RUFJRTs7QUFIQTtFQUNFOztBQUtKO0VBQ0U7OztBQ3BDSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0U7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7O0FBRUY7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7O0FBSUo7RUFDRTs7QUFDQTtFQUNFO0VBQ0E7RUFDQTs7QUFFRjtFQUlFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFSQTtFQUNFOztBQVFGO0VBQ0k7RUFDRjs7QUFDQTtFQUNFO0VBQ0E7O0FBR0o7RUFDRTtFQUNBOztBQUVGO0VBdEJGO0lBdUJJO0lBQ0E7Ozs7QUFLTjtFQUNFOztBQUNBO0VBQ0U7RUFDQTtFQUNBOztBQUNBO0VBSkY7SUFLSTtJQUNBOzs7O0FBTUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBQ0E7RUFLRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFWQTtFQUNFO0VBQ0E7O0FBU0Y7RUFDRTtFQUNBO0VBQ0E7O0FBRUY7RUFDRTtFQUNBO0VBQ0E7O0FBRUY7RUFDRTtFQUNBO0VBQ0E7O0FBRUY7RUEzQkY7SUE0Qkk7OztBQUdKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7RUFDQTtFQUNBOzs7QUFJSjtFQUNFOztBQUNBO0VBRkY7SUFHSTs7O0FBRUY7RUFDRTs7QUFDQTtFQUZGO0lBR0k7Ozs7QUFNSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVGO0VBQ0U7RUFDQTs7QUFDQTtFQUNFOztBQUVGO0VBQ0U7RUFDQTs7O0FDeEtSO0VBQ0M7OztBQUVEO0VBQ0U7OztBQUVGO0VBQ0U7RUFDQTtFQUNBOzs7QUFHRjtFQUNFO0VBQ0E7OztBQUdGO0VBQ0U7RUFDQTtFQUNBOztBQUNFO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFSjtFQUNFOztBQUNBO0VBRkY7SUFHSTs7O0FBR0o7RUFDQTtFQUNBO0VBQ0E7O0FBQ0U7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQUxGO0lBTUk7SUFDQTs7O0FBR0o7RUFDRTtFQUNBO0VBQ0E7O0FBQ0E7RUFKRjtJQUtJOzs7QUFFRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQVBGO0lBUUk7OztBQUtSO0VBQ0U7O0FBRUY7RUFDRTtFQUNBOztBQUVGO0VBQ0U7RUFDQTs7QUFDQTtFQUNFOzs7QUFJTjtFQUNFO0lBQ0U7O0VBRUY7SUFDRTs7O0FBSUo7RUFDRTtFQUNBOztBQUNBO0VBQ0U7OztBQUlKO0VBQ0U7O0FBRUU7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBR0o7RUFDRTs7QUFFRjtFQUNFO0VBQ0E7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTs7QUFDQTtFQUNFOztBQUVGO0VBQ0U7O0FBR0Y7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBOztBQUVGO0VBQ0U7RUFDQTs7QUFHQTtFQUFHOztBQUNIO0VBQ0U7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7OztBQUtOO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUY7RUFDRTtFQUNBO0VBQ0E7O0FBRUY7RUFDRTtFQUNBO0VBQ0E7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7RUFDQTs7QUFDQTtFQUpGO0lBS0k7SUFDQTs7O0FBSUY7RUFDRTtFQUNBOztBQUVGO0VBQ0U7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7O0FBRUY7RUFDRTtFQUNBOzs7QUFLTjtFQUNFOztBQUNBO0VBRkY7SUFHSTs7O0FBRUY7RUFDRTtFQUNBOztBQUNBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVGO0VBWEY7SUFZSTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7O0FBQ0E7RUFKRjtJQUtJO0lBQ0E7SUFDQTs7O0FBSUo7RUFDRTtFQUNBOztBQUNBO0VBSEY7SUFJSTtJQUNBOzs7QUFHSjtFQUNFO0VBQ0E7RUFDQTs7QUFFRjtFQUNFO0VBQ0E7RUFDQTtFQUNBOztBQUNBO0VBTEY7SUFNSTtJQUNBOzs7QUFJSjtFQUNFOztBQUNBO0VBRkY7SUFHSTs7O0FBSUo7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7O0FBQ0E7RUFDRTs7QUFLSjtFQUNFO0VBQ0E7RUFDQTs7QUFDQTtFQUNFOztBQUVGO0VBQ0U7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFDQTtFQVJGO0lBU0k7SUFDQTtJQUNBOzs7QUFJSjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7O0FBR0Y7RUFDRTs7QUFDQTtFQUNFOztBQUVGO0VBQ0U7O0FBSUo7RUFDRTs7QUFDQTtFQUNFO0VBQ0E7OztBTDlWTiIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIEJhc2UgKi9cbkBpbXBvcnQgJy4vYmFzZS9yZXNldCc7XG5AaW1wb3J0ICcuL2Jhc2UvZm9udHNBdXRvR2VuJztcbi8qIEJsb2NrcyAqL1xuQGltcG9ydCBcImJsb2Nrcy9fZm9vdGVyLnNjc3NcIjtcbkBpbXBvcnQgXCJibG9ja3MvX3VpLnNjc3NcIjtcbkBpbXBvcnQgXCJibG9ja3MvX3ZhcmlhYmxlcy5zY3NzXCI7XG5AaW1wb3J0IFwiYmxvY2tzL3N0eWxlLnNjc3NcIjtcblxuLyogTm8gc3R5bGVzIGNvZGUgYmVsb3cuIE9ubHkgaW4gbW9kdWxlcyAqL1xuIiwiLyogUmVzZXQgYW5kIGJhc2Ugc3R5bGVzICAqL1xuKiB7XG5cdHBhZGRpbmc6IDBweDtcblx0bWFyZ2luOiAwcHg7XG5cdGJvcmRlcjogbm9uZTtcbn1cblxuKixcbio6OmJlZm9yZSxcbio6OmFmdGVyIHtcblx0Ym94LXNpemluZzogYm9yZGVyLWJveDtcbn1cblxuLyogTGlua3MgKi9cblxuYSwgYTpsaW5rLCBhOnZpc2l0ZWQgIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbmE6aG92ZXIgIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbi8qIENvbW1vbiAqL1xuXG5hc2lkZSwgbmF2LCBmb290ZXIsIGhlYWRlciwgc2VjdGlvbiwgbWFpbiB7XG5cdGRpc3BsYXk6IGJsb2NrO1xufVxuXG5oMSwgaDIsIGgzLCBoNCwgaDUsIGg2LCBwIHtcbiAgICBmb250LXNpemU6IGluaGVyaXQ7XG5cdGZvbnQtd2VpZ2h0OiBpbmhlcml0O1xufVxuXG51bCwgdWwgbGkge1xuXHRsaXN0LXN0eWxlOiBub25lO1xufVxuXG5pbWcge1xuXHR2ZXJ0aWNhbC1hbGlnbjogdG9wO1xufVxuXG5pbWcsIHN2ZyB7XG5cdG1heC13aWR0aDogMTAwJTtcblx0aGVpZ2h0OiBhdXRvO1xufVxuXG5hZGRyZXNzIHtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuXG4vKiBGb3JtICovXG5cbmlucHV0LCB0ZXh0YXJlYSwgYnV0dG9uLCBzZWxlY3Qge1xuXHRmb250LWZhbWlseTogaW5oZXJpdDtcbiAgICBmb250LXNpemU6IGluaGVyaXQ7XG4gICAgY29sb3I6IGluaGVyaXQ7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7XG59XG5cbmlucHV0OjotbXMtY2xlYXIge1xuXHRkaXNwbGF5OiBub25lO1xufVxuXG5idXR0b24sIGlucHV0W3R5cGU9XCJzdWJtaXRcIl0ge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICBib3gtc2hhZG93OiBub25lO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIGJhY2tncm91bmQ6IG5vbmU7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5pbnB1dDpmb2N1cywgaW5wdXQ6YWN0aXZlLFxuYnV0dG9uOmZvY3VzLCBidXR0b246YWN0aXZlIHtcbiAgICBvdXRsaW5lOiBub25lO1xufVxuXG5idXR0b246Oi1tb3otZm9jdXMtaW5uZXIge1xuXHRwYWRkaW5nOiAwO1xuXHRib3JkZXI6IDA7XG59XG5cbmxhYmVsIHtcblx0Y3Vyc29yOiBwb2ludGVyO1xufVxuXG5sZWdlbmQge1xuXHRkaXNwbGF5OiBibG9jaztcbn1cbiIsIkBmb250LWZhY2Uge1xuXHRmb250LWZhbWlseTogTGF0bztcblx0Zm9udC1kaXNwbGF5OiBzd2FwO1xuXHRzcmM6IHVybChcIi4uL2ZvbnRzL0xhdG8tQmxhY2sud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksIHVybChcIi4uL2ZvbnRzL0xhdG8tQmxhY2sud29mZlwiKSBmb3JtYXQoXCJ3b2ZmXCIpO1xuXHRmb250LXdlaWdodDogOTAwO1xuXHRmb250LXN0eWxlOiBub3JtYWw7XG59XHJcbkBmb250LWZhY2Uge1xuXHRmb250LWZhbWlseTogTGF0bztcblx0Zm9udC1kaXNwbGF5OiBzd2FwO1xuXHRzcmM6IHVybChcIi4uL2ZvbnRzL0xhdG8tQm9sZC53b2ZmMlwiKSBmb3JtYXQoXCJ3b2ZmMlwiKSwgdXJsKFwiLi4vZm9udHMvTGF0by1Cb2xkLndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcblx0Zm9udC13ZWlnaHQ6IDcwMDtcblx0Zm9udC1zdHlsZTogbm9ybWFsO1xufVxyXG5AZm9udC1mYWNlIHtcblx0Zm9udC1mYW1pbHk6IExhdG87XG5cdGZvbnQtZGlzcGxheTogc3dhcDtcblx0c3JjOiB1cmwoXCIuLi9mb250cy9MYXRvLUxpZ2h0LndvZmYyXCIpIGZvcm1hdChcIndvZmYyXCIpLCB1cmwoXCIuLi9mb250cy9MYXRvLUxpZ2h0LndvZmZcIikgZm9ybWF0KFwid29mZlwiKTtcblx0Zm9udC13ZWlnaHQ6IDMwMDtcblx0Zm9udC1zdHlsZTogbm9ybWFsO1xufVxyXG5AZm9udC1mYWNlIHtcblx0Zm9udC1mYW1pbHk6IExhdG87XG5cdGZvbnQtZGlzcGxheTogc3dhcDtcblx0c3JjOiB1cmwoXCIuLi9mb250cy9MYXRvLVJlZ3VsYXIud29mZjJcIikgZm9ybWF0KFwid29mZjJcIiksIHVybChcIi4uL2ZvbnRzL0xhdG8tUmVndWxhci53b2ZmXCIpIGZvcm1hdChcIndvZmZcIik7XG5cdGZvbnQtd2VpZ2h0OiA0MDA7XG5cdGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cclxuIiwiLmZvb3RlciB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzNjM2MzYztcclxuICBwYWRkaW5nOiA1MHB4IDBweDtcclxuICAmX19jb250ZW50IHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICB9ICAgXHJcblxyXG4gICZfX2xvZ28ge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICB9XHJcblxyXG4gICZfX2ltZyB7XHJcbiAgICB3aWR0aDogMTI1cHg7XHJcbiAgfVxyXG5cclxuICAmX19tZW51IHtcclxuICAgIG1hcmdpbi1ib3R0b206IDM1cHg7XHJcbiAgfVxyXG4gIFxyXG4gICZfX2xpc3Qge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIH1cclxuICBcclxuICAmX19saXN0LWl0ZW0ge1xyXG4gICAgbWFyZ2luLXJpZ2h0OiAyMHB4O1xyXG4gIH1cclxuICBcclxuICAmX19saW5rIHtcclxuICAgICY6aG92ZXIge1xyXG4gICAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB9XHJcbiAgICBjb2xvcjogICNhNGE0YTQ7XHJcbiAgfVxyXG5cclxuICAmX195ZWFyIHtcclxuICAgIGNvbG9yOiAjNmM2YzZjO1xyXG4gIH1cclxufVxyXG4iLCJAaW1wb3J0ICd2YXJpYWJsZXMnO1xyXG5cclxuLy8gPT09PT09PT09INCX0JDQk9Ce0JvQntCS0J7QmiA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbi50aXRsZSB7XHJcbiAgZm9udC1zaXplOiAzNHB4O1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjI7XHJcbiAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gIGxldHRlci1zcGFjaW5nOiAwLjE2ZW07XHJcbn1cclxuLy8gPT09PT09PT09INCa0J3QntCf0JrQkCA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbi5idXR0b24ge1xyXG4gIGZvbnQtc2l6ZTogMTZweDtcclxuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjI7XHJcbiAgbGV0dGVyLXNwYWNpbmc6IDAuMDZlbTtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICBwYWRkaW5nOiAxNnB4IDQwcHg7XHJcbiAgJl93aGl0ZSB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCB3aGl0ZTtcclxuICB9XHJcbiAgJl9ibGFjayB7XHJcbiAgICBjb2xvcjogYmxhY2s7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICB9XHJcbiAgJjpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjhmN2Y3O1xyXG4gICAgY29sb3I6ICMzYzNjM2M7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxuICAgIHRyYW5zaXRpb246IGFsbCAxcyAwcyBlYXNlO1xyXG4gIH1cclxufVxyXG4vLyA9PT09PT09PT0g0J3QkNCS0JjQk9CQ0KbQmNCe0J3QndCQ0K8g0J/QkNCd0JXQm9CsID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuLm1lbnUge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAmX19yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG4gIH1cclxuICAmX19pdGVtIHtcclxuICAgIGEge1xyXG4gICAgICBjb2xvcjogIzNjM2MzYztcclxuICAgIH1cclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiAjM2MzYzNjO1xyXG4gICAgbWFyZ2luOiAwcHggMi41JTtcclxuICAgIGZvbnQtc2l6ZTogMTVweDtcclxuICAgIGxpbmUtaGVpZ2h0OiAxLjI7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG4gICAgJl9hY3RpdmUge1xyXG4gICAgICAgIGNvbG9yOiAjYWRhMDc0O1xyXG4gICAgICBmb250LXdlaWdodDogNzAwO1xyXG4gICAgICAmOmhvdmVyIHtcclxuICAgICAgICBjb2xvcjogICNkNWMzODggO1xyXG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAxcyAwcyBlYXNlO1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgICAmOmhvdmVyIHtcclxuICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgICAgIHRyYW5zaXRpb246IGFsbCAxcyAwcyBlYXNlO1xyXG4gICAgfVxyXG4gICAgQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogJGJwMSkge1xyXG4gICAgICBmbGV4OiAxIDEgMjUlO1xyXG4gICAgICBtYXJnaW46IDE1cHggMiU7XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcbi8vID09PT09PT09PSDQmNCa0J7QndCa0Jgg0JjQlyDQoNCQ0JfQlNCV0JvQkCBBQk9VVCA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcbi5pY29ucyB7XHJcbiAgbWFyZ2luOiAwcHggYXV0bztcclxuICAmX19yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAwcHggLTIwcHg7XHJcbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAkYnAyKSB7XHJcbiAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICAgIG1hcmdpbjogMHB4IGF1dG87XHJcbiAgICB9XHJcbiAgfVxyXG59XHJcbi8vID09PT09PT09PSDQodCe0JTQldCg0JbQmNCc0J7QlSDQmNCa0J7QndCe0Jog0JjQlyDQoNCQ0JfQlNCV0JvQkCBBQk9VVCA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XHJcblxyXG4gIC5pbmZvaWNvbiB7XHJcbiAgICBmbGV4OiAwIDEgMzAwcHg7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgcGFkZGluZzogMHB4IDIwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgICZfX2ljb24ge1xyXG4gICAgICBwaWN0dXJlIHtcclxuICAgICAgICB3aWR0aDogNDJweDtcclxuICAgICAgICBoZWlnaHQ6IDQycHg7XHJcbiAgICAgIH1cclxuICAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgICBib3JkZXI6IDFweCBzb2xpZCByZ2IoMTk2LCAxOTQsIDE5NCk7XHJcbiAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgICBwYWRkaW5nOiAxNXB4O1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA0MHB4O1xyXG4gICAgICAmX3dlYiBwaWN0dXJlIHtcclxuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgbGVmdDogMi41cHg7XHJcbiAgICAgICAgdG9wOiAycHg7XHJcbiAgICAgIH1cclxuICAgICAgJl9pb3MgcGljdHVyZSB7XHJcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgICAgIGxlZnQ6IDVweDtcclxuICAgICAgICB0b3A6IDRweDtcclxuICAgICAgfVxyXG4gICAgICAmX21hcmtldGluZyBwaWN0dXJlIHtcclxuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgdG9wOiA0cHg7XHJcbiAgICAgICAgbGVmdDogNXB4O1xyXG4gICAgICB9XHJcbiAgICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6ICRicDIpIHtcclxuICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgICAmX190aXRsZSB7XHJcbiAgICAgIGZvbnQtc2l6ZTogMjJweDtcclxuICAgICAgbGluZS1oZWlnaHQ6IDEuMjtcclxuICAgICAgZm9udC13ZWlnaHQ6IDQwMDtcclxuICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTZlbTtcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMzZweDtcclxuICAgIH1cclxuICAgICZfX3RleHQge1xyXG4gICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgIGxpbmUtaGVpZ2h0OiAyNnB4O1xyXG4gICAgICBmb250LXdlaWdodDogMzAwO1xyXG4gICAgICBjb2xvcjogIzg2ODU4NTtcclxuICAgIH1cclxuICB9XHJcbi8vID09PT09PT09PSDQpNCe0KLQmtCQINCY0Jcg0J/QntCg0KLQpNCe0JvQmNCeID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuICAuZXhhbXBsZSB7XHJcbiAgICBmbGV4OiAwIDEgNTAlO1xyXG4gICAgQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogJGJwMSkge1xyXG4gICAgICBmbGV4OiAwIDEgMTAwJTtcclxuICAgIH1cclxuICAgICZfX2ltYWdlIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6ICRicDMpIHtcclxuICAgICAgICBwYWRkaW5nOiAwcHggNSU7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcbi8vID09PT09PT09PSDQmNCd0J/Qo9CiID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuICAuaW5wdXQge1xyXG4gICAgJl9fbGFiZWwge1xyXG4gICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgICAgbGluZS1oZWlnaHQ6IDEuMjtcclxuICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcclxuICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMDZlbTtcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMjBweDtcclxuICAgIH1cclxuICAgICZfX2FyZWEge1xyXG4gICAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgJl9oIHtcclxuICAgICAgICBoZWlnaHQ6IDM1cHg7XHJcbiAgICAgIH1cclxuICAgICAgJl9idCB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjdmNztcclxuICAgICAgICBib3JkZXItdG9wOiAxcHggc29saWQgYmxhY2s7XHJcbiAgICAgIH1cclxuICAgIH1cclxuICB9XHJcbiAgIiwiaHRtbCB7XHJcblx0c2Nyb2xsLWJlaGF2aW9yOiBzbW9vdGg7XHJcbn1cclxuYm9keSB7XHJcbiAgZm9udC1mYW1pbHk6ICdMYXRvJywgc2Fucy1zZXJpZjtcclxufVxyXG4ud3JhcHBlciB7XHJcbiAgbWluLWhlaWdodDogMTAwdmg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcclxufVxyXG4vLz09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG4uY29udGFpbmVyIHtcclxuICBtYXgtd2lkdGg6IDExMjBweDtcclxuICBtYXJnaW46IDBweCBhdXRvO1xyXG59XHJcbi8vID09PT09PT09PT0g0J/QldCg0JLQq9CZINCR0JvQntCaID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuLmhlYWRlciB7XHJcbiAgYmFja2dyb3VuZDogdXJsKC4vLi4vLi4vaW1nL2hlYWRlcl9iYWNrLnBuZykgbm8tcmVwZWF0O1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgYmFja2dyb3VuZC1hdHRhY2htZW50OiBmaXhlZDtcclxuICAgIC5jb250YWluZXIge1xyXG4gICAgICBoZWlnaHQ6IDEwMHZoO1xyXG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICB9XHJcbiAgJl9fbG9nbyB7XHJcbiAgICBtYXJnaW46IDE1dmggYXV0bztcclxuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6ICRicDMpIHtcclxuICAgICAgbWFyZ2luOiA5dmggYXV0bztcclxuICAgIH1cclxuICB9XHJcbiAgJl9fdGl0bGUge1xyXG4gIGxldHRlci1zcGFjaW5nOiAwLjE2ZW07XHJcbiAgY29sb3I6ICNmZmZmZmY7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgJl9sIHtcclxuICAgICAgZm9udC1zaXplOiAycmVtO1xyXG4gICAgICBmb250LXdlaWdodDogOTAwO1xyXG4gICAgICBsaW5lLWhlaWdodDogMi41cmVtO1xyXG4gICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAkYnAxKSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAxLjZyZW07XHJcbiAgICAgICAgbGluZS1oZWlnaHQ6IDEuOHJlbTtcclxuICAgICAgfVxyXG4gICAgfVxyXG4gICAgJl9zIHtcclxuICAgICAgZm9udC1zaXplOiAxLjVyZW07XHJcbiAgICAgIGZvbnQtd2VpZ2h0OiAxMDA7XHJcbiAgICAgIG1hcmdpbjogMTBweCAwcHggNC42dmggMHB4O1xyXG4gICAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiRicDEpIHtcclxuICAgICAgICBmb250LXNpemU6IDEuMnJlbTtcclxuICAgICAgfVxyXG4gICAgICAmOjphZnRlciB7XHJcbiAgICAgICAgY29udGVudDogXCJcIjtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xyXG4gICAgICAgIHdpZHRoOiA5LjQlO1xyXG4gICAgICAgIGhlaWdodDogMnB4O1xyXG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICAgIG1hcmdpbjogNXZoIGF1dG8gNXZoIGF1dG87XHJcbiAgICAgICAgQG1lZGlhICBzY3JlZW4gYW5kIChtaW4td2lkdGg6ICRicDIpIGFuZCAobWF4LXdpZHRoOiAkYnA1KSB7XHJcbiAgICAgICAgICBtYXJnaW4tYm90dG9tOiA1dmg7XHJcbiAgICAgICAgfVxyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgfVxyXG4gICZfX2J1dHRvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA1dmg7XHJcbiAgICB9XHJcbiAgJl9faWNvbiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiA4dmg7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgfVxyXG4gICZfX2ltYWdlIHtcclxuICAgIHdpZHRoOiAxN3B4O1xyXG4gICAgYW5pbWF0aW9uOiBtb3ZpbmctYXJyb3cgMXMgbGluZWFyIGluZmluaXRlIGFsdGVybmF0ZTtcclxuICAgICY6aG92ZXIge1xyXG4gICAgICBhbmltYXRpb24tcGxheS1zdGF0ZTogcGF1c2VkO1xyXG4gICAgfVxyXG4gIH1cclxufVxyXG5Aa2V5ZnJhbWVzIG1vdmluZy1hcnJvdyB7XHJcbiAgZnJvbXtcclxuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwcHgpO1xyXG4gIH1cclxuICB0byB7XHJcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMjBweCk7XHJcbiAgfVxyXG59XHJcbi8vID09PT09PT09PT0g0JLQotCe0KDQntCZINCR0JvQntCaID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuLm5hdmJhciB7XHJcbiAgbWFyZ2luOiAwcHggYXV0byAxNyUgYXV0bztcclxuICBib3gtc2hhZG93OiAwcHggMXB4IDBweCAwcHggcmdiYSgwLDAsMCwwLjA1KTtcclxuICAmX19tZW51IHtcclxuICAgIHBhZGRpbmc6IDI0cHggMDtcclxuICB9XHJcbn1cclxuLy8gPT09PT09PT09PSDQotCg0JXQotCY0Jkg0JHQm9Ce0JogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG4uYWJvdXQge1xyXG4gIHBhZGRpbmc6IDBweCAxMHB4IDYwcHggMTBweDtcclxuICAmX190aXRsZSB7XHJcbiAgICAmOjphZnRlciB7XHJcbiAgICAgIGNvbnRlbnQ6IFwiXCI7XHJcbiAgICAgIHdpZHRoOiA3MyU7XHJcbiAgICAgIGhlaWdodDogMXB4O1xyXG4gICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgICAgbWFyZ2luOiAzNXB4IGF1dG87XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgfVxyXG4gIH1cclxuICAmX19ib2R5IHtcclxuICAgIG1hcmdpbjogMHB4IGF1dG8gNzBweCBhdXRvO1xyXG4gIH1cclxuICAmX19yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIH1cclxuICAmX190ZXh0IHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMXJlbTtcclxuICAgIGxpbmUtaGVpZ2h0OiAyNXB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcclxuICAgIGNvbG9yOiAjODY4NTg1O1xyXG4gICAgbWF4LXdpZHRoOiA3MDBweDtcclxuICAgIG1hcmdpbjogMHB4IGF1dG87XHJcbiAgfVxyXG59XHJcbi8vID09PT09PT09PT0g0KfQldCi0JLQldCg0KLQq9CZINCR0JvQntCaID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuLnBvcnRmb2xpbyB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YzZjNmMztcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgcGFkZGluZzogMTA3cHggMHB4IDgwcHggMHB4O1xyXG4gICZfX3RpdGxlIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDUuMyU7XHJcbiAgfVxyXG4gICZfX21lbnUge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogOCU7XHJcbiAgfVxyXG5cclxuICAmX19ib2R5IHtcclxuICAgIG1hcmdpbi1ib3R0b206IDQ4cHg7XHJcbiAgfVxyXG5cclxuICAmX19yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAwcHggLTEzcHg7XHJcbiAgfVxyXG4gICZfX2V4YW1wbGUge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTZweDtcclxuICAgIHBhZGRpbmc6IDBweCAxM3B4O1xyXG4gIH1cclxuICAmX19idXR0b24ge1xyXG4gICAgYSB7Y29sb3I6ICMwMDAwMDA7fVxyXG4gICAgJjpob3ZlciB7XHJcbiAgICAgIGJveC1zaGFkb3c6IDdweCA3cHggMDtcclxuICAgICAgdHJhbnNpdGlvbjogYWxsIDFzIGVhc2U7XHJcbiAgICB9XHJcbiAgICAmOmFjdGl2ZSB7XHJcbiAgICAgIGJveC1zaGFkb3c6IDNweCAzcHggMDtcclxuICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcclxuICAgIH1cclxuICB9XHJcbn1cclxuLy8gPT09PT09PT09PSDQn9Cv0KLQq9CZINCR0JvQntCaID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cclxuLnBhcnRuZXJzIHtcclxuICBtYXgtaGVpZ2h0OiAzOTBweDtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoLi8uLi8uLi9pbWcvcGFydG5lcl9iYWNrZ3JvdW5kLnBuZyk7XHJcbiAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcclxuICBwYWRkaW5nOiA5LjV2aCAwcHg7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogYm90dG9tO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgJl9fdGl0bGUge1xyXG4gICAgZm9udC1zaXplOiAzMC40cHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBsaW5lLWhlaWdodDogMS4yO1xyXG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcclxuICAgIGxldHRlci1zcGFjaW5nOiAwLjA2ZW07XHJcbiAgICBjb2xvcjogI2ZmZmZmZjtcclxuICAgIG1hcmdpbi1ib3R0b206IDkuMiU7XHJcbiAgfVxyXG4gICZfX2ljb25zIHtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIG1heC13aWR0aDogNTg1cHg7XHJcbiAgICBtYXJnaW46IDBweCBhdXRvO1xyXG4gIH1cclxuICAmX19yb3cge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxuICB9XHJcbiAgJl9faW1hZ2UtYmxvY2sge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgZmxleDogMCAxIDI1JTtcclxuICAgIEBtZWRpYSAgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAkYnAxKSB7XHJcbiAgICAgIGZsZXg6IDAgMSA1MCU7XHJcbiAgICAgIG1hcmdpbi1ib3R0b206IDUlO1xyXG4gICAgfVxyXG4gIH1cclxuICAmX19pbWFnZSB7XHJcbiAgICAmX2ZpcnN0IHtcclxuICAgICAgd2lkdGg6IDM1cHg7XHJcbiAgICAgIGhlaWdodDogNDdweDtcclxuICAgIH1cclxuICAgICZfc2Vjb25kIHtcclxuICAgICAgd2lkdGg6IDUycHg7XHJcbiAgICAgIGhlaWdodDogNjJweDtcclxuICAgIH1cclxuICAgICZfdGhpcmQge1xyXG4gICAgICB3aWR0aDogNTNweDtcclxuICAgICAgaGVpZ2h0OiA2M3B4O1xyXG4gICAgfVxyXG4gICAgJl9mb3VydGgge1xyXG4gICAgICB3aWR0aDogMTExcHg7XHJcbiAgICAgIGhlaWdodDogNDBweDtcclxuICAgIH1cclxuICB9XHJcbn1cclxuLy8gPT09PT09PT09PSDQqNCV0KHQotCe0Jkg0JHQm9Ce0JogPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxyXG4uY29udGFjdCB7XHJcbiAgcGFkZGluZzogMTAwcHggMDtcclxuICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiAkYnAyKSB7XHJcbiAgICBwYWRkaW5nOiAzMHB4O1xyXG4gIH1cclxuICAmX190aXRsZSB7XHJcbiAgICBtYXJnaW46IDgwcHggYXV0byAxNjBweCBhdXRvO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgJjo6YWZ0ZXIge1xyXG4gICAgICBjb250ZW50OiBcIlwiO1xyXG4gICAgICB3aWR0aDogOCU7XHJcbiAgICAgIGhlaWdodDogMXB4O1xyXG4gICAgICBkaXNwbGF5OiBibG9jaztcclxuICAgICAgbWFyZ2luOiAzNXB4IGF1dG87XHJcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xyXG4gICAgfVxyXG4gICAgQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjcwcHgpIHtcclxuICAgICAgbWFyZ2luOiAwIGF1dG8gNjBweCBhdXRvO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgJl9fcm93IHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIG1hcmdpbjogMHB4IC0zNXB4O1xyXG4gICAgQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNjcwcHgpIHtcclxuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgICAgbWFyZ2luOiAwO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgJl9fbGVmdC1zaWRlIHtcclxuICAgIGZsZXg6IDAgMSAzODBweDtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDM1cHg7XHJcbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2NzBweCkge1xyXG4gICAgICBwYWRkaW5nOiAwO1xyXG4gICAgICB3aWR0aDogODAlO1xyXG4gICAgfVxyXG4gIH1cclxuICAmX19sZWZ0LXJvdyB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGVuZDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgfVxyXG4gICZfX25hbWUtZW1haWwge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogNDBweDtcclxuICAgIEBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDY3MHB4KSB7XHJcbiAgICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiA0MHB4O1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgJl9fbmFtZSB7XHJcbiAgICBmbGV4OiAwIDEgMTYwcHg7XHJcbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2NzBweCkge1xyXG4gICAgICBtYXJnaW4tYm90dG9tOiAzMHB4O1xyXG4gICAgfVxyXG4gIH1cclxuICBcclxuICAmX19lbWFpbCB7XHJcbiAgICBmbGV4OiAwIDEgMTYwcHg7XHJcbiAgfVxyXG5cclxuICAmX19tZXNzYWdlIHtcclxuICAgIGZsZXg6IDAgMSAxMDAlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICB0ZXh0YXJlYSB7XHJcbiAgICAgIHJlc2l6ZTogdmVydGljYWw7XHJcbiAgICB9XHJcbiAgfVxyXG5cclxuXHJcbiAgJl9fc3VibWl0IHtcclxuICAgIGZsZXg6IDAgMSA0NHB4O1xyXG4gICAgbWFyZ2luLXRvcDogNDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xyXG4gICAgaW5wdXQge1xyXG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICAgIH1cclxuICAgIDpob3ZlciB7XHJcbiAgICAgIGNvbG9yOiAjODY4NTg1O1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgJl9fcmlnaHQtc2lkZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgcGFkZGluZy1sZWZ0OiAzNXB4O1xyXG4gICAgZmxleDogMCAxIDI3MHB4O1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgbGluZS1oZWlnaHQ6IDI2cHg7XHJcbiAgICBsZXR0ZXItc3BhY2luZzogMC4wNmVtO1xyXG4gICAgY29sb3I6ICMwMDAwMDA7XHJcbiAgICBAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA2NzBweCkge1xyXG4gICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICAgIG1heC13aWR0aDogMjY1cHg7XHJcbiAgICAgIHBhZGRpbmc6IDA7XHJcbiAgICB9XHJcbiAgfVxyXG4gIFxyXG4gICZfX3BhcmFncmFwaCB7XHJcbiAgICBmb250LXdlaWdodDogMzAwO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMjVweDtcclxuICB9XHJcblxyXG4gICZfX2F1dGhvciB7XHJcbiAgICBmb250LXdlaWdodDogNzAwO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMTVweDtcclxuICB9XHJcblxyXG4gICZfX2ltYWdlLXdyYXBwZXIge1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgYm9yZGVyOiAycHggc29saWQgIzFlMWUxZTs7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgICBtYXJnaW4tcmlnaHQ6IDEwcHg7XHJcbiAgfVxyXG4gIFxyXG4gICZfX2ljb25zIHtcclxuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XHJcbiAgICAmX3BmIHtcclxuICAgICAgcGFkZGluZzogN3B4IDEwcHg7XHJcbiAgICB9XHJcbiAgICAmX3BzIHtcclxuICAgICAgcGFkZGluZzogOC41cHg7XHJcbiAgICB9XHJcbiAgICB9XHJcbiAgXHJcbiAgJl9fbWFpbCB7XHJcbiAgICBmb250LXdlaWdodDogNDAwO1xyXG4gICAgYSB7XHJcbiAgICAgIGNvbG9yOiBibGFjaztcclxuICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgIH1cclxuICB9XHJcbn1cclxuXHJcblxyXG4iXX0= */

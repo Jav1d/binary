@@ -1,0 +1,42 @@
+.footer {
+  background-color: #3c3c3c;
+  padding: 50px 0px;
+  &__content {
+    text-align: center;
+    font-size: 14px;
+  }   
+
+  &__logo {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 125px;
+  }
+
+  &__menu {
+    margin-bottom: 35px;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__list-item {
+    margin-right: 20px;
+  }
+  
+  &__link {
+    &:hover {
+      color: white;
+    }
+    color:  #a4a4a4;
+  }
+
+  &__year {
+    color: #6c6c6c;
+  }
+}
